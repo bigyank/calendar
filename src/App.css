@@ -1,38 +1,113 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-content {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.country-selector {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.loading, .error {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.loading {
+  background-color: #e8f4fd;
+  color: #0a558c;
+}
+
+.error {
+  background-color: #fde8e8;
+  color: #8c0a0a;
+}
+
+.holidays-list {
+  text-align: left;
+}
+
+.holidays-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.holidays-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.holiday-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.holiday-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.holiday-date {
+  font-weight: 500;
+  color: #555;
+  min-width: 180px;
+}
+
+.holiday-name {
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .holiday-item {
+    flex-direction: column;
+    gap: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .holiday-date {
+    min-width: unset;
   }
 }
