@@ -1,11 +1,60 @@
 .App {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+.app-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.app-content {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab styles */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.tabs button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tabs button.active {
+  background-color: white;
+  color: #282c34;
+}
+
+/* Calendar styles */
 .App-header {
   background-color: #282c34;
   padding: 20px;
@@ -99,6 +148,92 @@ select {
 .holiday-name {
   font-weight: 600;
   color: #333;
+}
+
+/* Experience section styles */
+.experience-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.experience-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-experience-button {
+  padding: 10px 16px;
+  border: 1px dashed #0a66c2;
+  background-color: transparent;
+  color: #0a66c2;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.add-experience-button:hover {
+  background-color: rgba(10, 102, 194, 0.08);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 552px;
+}
+
+.experiences-list {
+  margin-top: 30px;
+}
+
+.experience-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.experience-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card h3 {
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 4px;
+}
+
+.experience-card h4 {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+
+.experience-date {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
 }
 
 @media (max-width: 600px) {
